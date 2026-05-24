@@ -1,0 +1,91 @@
+---
+// src/components/ImpactKPIs.astro
+// Bloque visual de métricas de alto impacto — fondo brand-dark
+
+const kpis = [
+  {
+    id: 'kpi-water',
+    value: '25%',
+    title: 'Ahorro de agua',
+    description: 'Riego optimizado por microclima y sensores de humedad multicapa.',
+  },
+  {
+    id: 'kpi-losses',
+    value: '40%',
+    title: 'Reducción de pérdidas',
+    description: 'Decisiones de prevención basadas en datos precisos de suelo y clima.',
+  },
+  {
+    id: 'kpi-roi',
+    value: '3x',
+    title: 'Retorno de Inversión',
+    description: 'Amortización estimada en menos de dos campañas agrícolas.',
+  },
+];
+---
+
+<section
+  id="impacto-kpis"
+  class="bg-brand-dark py-20 px-6"
+  aria-labelledby="kpis-heading"
+>
+  <!-- Fondo decorativo sutil -->
+  <div
+    aria-hidden="true"
+    class="absolute pointer-events-none inset-0 overflow-hidden"
+    style="background: radial-gradient(ellipse at 50% 100%, rgba(34,197,94,0.12) 0%, transparent 60%);"
+  ></div>
+
+  <div class="relative max-w-5xl mx-auto">
+    <!-- Encabezado de sección -->
+    <div class="text-center mb-14">
+      <p class="text-brand-primary font-semibold text-xs tracking-widest uppercase mb-3">
+        Impacto Real
+      </p>
+      <h2
+        id="kpis-heading"
+        class="text-3xl md:text-4xl font-bold font-display text-white"
+      >
+        Resultados que hablan por sí solos
+      </h2>
+    </div>
+
+    <!-- Grid de KPIs -->
+    <div
+      class="grid grid-cols-1 md:grid-cols-3 gap-0 text-center divide-y md:divide-y-0 md:divide-x divide-white/20"
+      role="list"
+      aria-label="Métricas clave de LoRaTerra"
+    >
+      {kpis.map((kpi) => (
+        <div
+          id={kpi.id}
+          role="listitem"
+          class="group flex flex-col items-center px-8 py-10 md:py-0"
+        >
+          <!-- Número gigante con animación hover sutil -->
+          <span
+            class="text-6xl md:text-7xl font-bold text-brand-primary mb-4 leading-none transition-transform duration-300 group-hover:scale-105 inline-block"
+            aria-label={kpi.value}
+          >
+            {kpi.value}
+          </span>
+
+          <!-- Título -->
+          <h3 class="text-xl font-semibold text-white mb-2">
+            {kpi.title}
+          </h3>
+
+          <!-- Descripción -->
+          <p class="text-brand-light/80 text-sm max-w-xs mx-auto leading-relaxed">
+            {kpi.description}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Nota de fuente -->
+    <p class="text-center text-white/30 text-xs mt-12">
+      * Datos basados en pilotos de campo realizados en explotaciones de 5 a 120 ha entre 2023 y 2024.
+    </p>
+  </div>
+</section>
