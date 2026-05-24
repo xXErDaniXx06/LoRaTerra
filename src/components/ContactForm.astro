@@ -129,7 +129,7 @@
         />
         <label for="contact-gdpr" class="text-xs text-slate-500 leading-relaxed cursor-pointer">
           Acepto la
-          <a href="/privacidad" class="text-brand-primary hover:underline">Política de Privacidad</a>
+          <a href="/politica-privacidad" class="text-brand-primary hover:underline">Política de Privacidad</a>
           y el tratamiento de mis datos para recibir información comercial de LoRaTerra.
         </label>
       </div>
@@ -169,15 +169,58 @@
 
 <script>
   const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const btn = document.getElementById('contact-submit-btn') as HTMLButtonElement | null;
 
-  form?.addEventListener('submit', (e) => {
+  form?.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const btn = document.getElementById('contact-submit-btn');
-    if (btn) {
-      btn.textContent = '✓ Mensaje enviado — te contactaremos pronto';
-      btn.classList.add('bg-green-700', 'cursor-default');
-      btn.classList.remove('hover:bg-green-600', 'hover:-translate-y-0.5');
-      (btn as HTMLButtonElement).disabled = true;
+    
+    if (!form || !btn) return;
+
+    // Guardar estado original
+    const originalBtnText = btn.innerHTML;
+    
+    // Estado de carga
+    btn.innerHTML = 'Enviando...';
+    btn.disabled = true;
+    btn.classList.add('opacity-75', 'cursor-wait');
+
+    // Recoger datos
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      // Enviar a la API
+      const response = await fetch('/api/contact.json', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        // Éxito
+        btn.innerHTML = '✓ ¡Gracias! Hemos recibido tus datos correctamente';
+        btn.classList.remove('bg-brand-primary', 'hover:bg-green-600', 'hover:-translate-y-0.5', 'opacity-75', 'cursor-wait');
+        btn.classList.add('bg-green-700', 'cursor-default');
+        form.reset();
+      } else {
+        // Error de validación del servidor
+        throw new Error(result.error || 'Error al enviar');
+      }
+    } catch (error) {
+      // Error de red o del servidor
+      console.error("Error en el formulario:", error);
+      btn.innerHTML = '⚠ Hubo un error. Inténtalo de nuevo';
+      btn.classList.remove('opacity-75', 'cursor-wait');
+      btn.disabled = false;
+      
+      // Restaurar el botón después de 3 segundos
+      setTimeout(() => {
+        btn.innerHTML = originalBtnText;
+      }, 3000);
     }
   });
 </script>
