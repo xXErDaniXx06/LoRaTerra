@@ -10,9 +10,9 @@ const quickLinks = [
 ];
 
 const legalLinks = [
-  { label: 'Aviso Legal',          href: '/aviso-legal' },
-  { label: 'Política de Privacidad', href: '/privacidad' },
-  { label: 'Política de Cookies',  href: '/cookies' },
+  { label: 'Aviso Legal',            href: '/aviso-legal' },
+  { label: 'Política de Privacidad', href: '/politica-privacidad' },
+  { label: 'Política de Cookies',    href: '/politica-cookies' },
 ];
 
 const currentYear = new Date().getFullYear();
@@ -118,32 +118,51 @@ const currentYear = new Date().getFullYear();
         FSE+ — Fondo Social Europeo Plus · Programa de apoyo al emprendimiento tecnológico 2024–2027
       </p>
 
-      <!-- Logos institucionales (placeholders) -->
+      <!-- Logos institucionales -->
       <div
-        class="flex flex-wrap items-center justify-center gap-6"
+        class="flex justify-center gap-6 mt-4 flex-wrap items-center"
         aria-label="Logotipos de entidades cofinanciadoras"
       >
-        {[
-          { id: 'logo-ue',      label: 'Unión Europea · FSE+',          width: '80px' },
-          { id: 'logo-eoi',     label: 'EOI Escuela de Organización Industrial', width: '64px' },
-          { id: 'logo-gob',     label: 'Gobierno de España',             width: '64px' },
-          { id: 'logo-junta',   label: 'Junta de Andalucía',             width: '64px' },
-        ].map((logo) => (
-          <div
-            id={logo.id}
-            class="h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center px-4"
-            style={`min-width: ${logo.width};`}
-            title={logo.label}
-            aria-label={logo.label}
-          >
-            <span class="text-white/30 text-xs font-medium">{logo.label.split(' ')[0]}</span>
-          </div>
-        ))}
+        <img
+          src="/logos/ue-fse.png"
+          alt="Cofinanciado por la Unión Europea — FSE+"
+          class="h-12 object-contain opacity-80 grayscale hover:grayscale-0 transition duration-300"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        />
+        <img
+          src="/logos/eoi.png"
+          alt="Escuela de Organización Industrial — EOI"
+          class="h-12 object-contain opacity-80 grayscale hover:grayscale-0 transition duration-300"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        />
+        <img
+          src="/logos/gobierno-espana.png"
+          alt="Gobierno de España"
+          class="h-12 object-contain opacity-80 grayscale hover:grayscale-0 transition duration-300"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        />
+        <img
+          src="/logos/junta-andalucia.png"
+          alt="Junta de Andalucía"
+          class="h-12 object-contain opacity-80 grayscale hover:grayscale-0 transition duration-300"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        />
       </div>
 
       <!-- Copyright -->
       <p class="text-xs text-white/30">
         © {currentYear} LoRaTerra · Todos los derechos reservados · Málaga, España
+      </p>
+
+      <!-- Disclaimer métricas -->
+      <p class="text-brand-light/60 text-xs max-w-2xl leading-relaxed">
+        * Las métricas de ahorro y reducción de pérdidas representan estimaciones de rendimiento
+        basadas en estudios y pruebas piloto de arquitecturas IoT y sistemas análogos de
+        agricultura de precisión.
       </p>
     </div>
 
