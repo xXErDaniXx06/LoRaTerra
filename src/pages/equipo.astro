@@ -1,23 +1,64 @@
 ---
 // src/pages/equipo.astro
+// Página de Equipo — TeamProfile + ContactForm + Footer
+
 import Layout from '../layouts/Layout.astro';
+import TeamProfile from '../components/TeamProfile.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout
   title="Equipo — LoRaTerra"
-  description="El equipo multidisciplinar de LoRaTerra: ingenieros de telecomunicaciones, agrónomos y expertos en datos trabajando por una agricultura de precisión."
+  description="El equipo de LoRaTerra: ingenieros, agrónomos y expertos en IoT comprometidos con la agricultura de precisión. Conoce a Daniel Carrasco, CEO & Lead Engineer."
 >
-  <div class="pt-32 pb-20 px-6 bg-eco-bg min-h-screen">
-    <div class="max-w-7xl mx-auto">
-      <p class="text-brand-primary font-semibold text-sm tracking-wide uppercase mb-3">Equipo</p>
-      <h1 class="text-4xl md:text-5xl font-bold font-display text-brand-dark leading-tight max-w-2xl">
-        Ingenieros y agrónomos apasionados
+
+  <!-- ── PAGE HEADER ── -->
+  <div class="relative pt-32 pb-16 bg-brand-dark text-white text-center overflow-hidden">
+
+    <!-- Dot pattern decorativo -->
+    <div
+      aria-hidden="true"
+      class="absolute inset-0 opacity-[0.04]"
+      style="background-image: radial-gradient(circle, #22c55e 1px, transparent 1px); background-size: 32px 32px;"
+    ></div>
+
+    <!-- Glow radial -->
+    <div
+      aria-hidden="true"
+      class="absolute inset-0 pointer-events-none"
+      style="background: radial-gradient(ellipse at 50% 100%, rgba(34,197,94,0.15) 0%, transparent 60%);"
+    ></div>
+
+    <div class="relative max-w-3xl mx-auto px-6">
+      <p class="text-brand-primary font-semibold text-xs tracking-widest uppercase mb-4">
+        LoRaTerra · Equipo
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold font-display leading-tight">
+        Del Espacio a la Tierra.
+        <span class="block text-brand-primary mt-1">El equipo que lo hace posible.</span>
       </h1>
-      <p class="text-slate-600 mt-6 max-w-xl leading-relaxed text-lg">
-        Conoce al equipo multidisciplinar detrás de LoRaTerra, combinando agronomía, electrónica IoT
-        e ingeniería de datos.
-        <em class="not-italic font-semibold text-brand-dark">Próximamente.</em>
+      <p class="text-white/70 mt-5 text-lg max-w-xl mx-auto leading-relaxed">
+        Transferencia tecnológica real: del desarrollo aeroespacial a la parcela agrícola,
+        para garantizar la máxima fiabilidad en campo.
       </p>
     </div>
+
+    <!-- Wave a blanco -->
+    <div class="absolute bottom-0 left-0 right-0 overflow-hidden leading-none" aria-hidden="true">
+      <svg viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-10">
+        <path d="M0,40 C360,0 1080,0 1440,40 L1440,40 L0,40 Z" fill="#ffffff"/>
+      </svg>
+    </div>
   </div>
+
+  <!-- ── PERFILES DE EQUIPO ── -->
+  <TeamProfile />
+
+  <!-- ── FORMULARIO DE CONTACTO ── -->
+  <ContactForm />
+
+  <!-- ── FOOTER GLOBAL ── -->
+  <Footer />
+
 </Layout>
