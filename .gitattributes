@@ -1,0 +1,26 @@
+# Normaliza finales de línea en el repo (LF en todo)
+* text=auto eol=lf
+
+# Fuerza LF explícito en archivos de código
+*.astro    text eol=lf
+*.css      text eol=lf
+*.js       text eol=lf
+*.mjs      text eol=lf
+*.ts       text eol=lf
+*.json     text eol=lf
+*.md       text eol=lf
+*.svg      text eol=lf
+*.html     text eol=lf
+
+# Binarios — sin conversión
+*.png      binary
+*.jpg      binary
+*.jpeg     binary
+*.gif      binary
+*.ico      binary
+*.webp     binary
+*.woff     binary
+*.woff2    binary
+*.ttf      binary
+*.otf      binary
+*.eot      binary

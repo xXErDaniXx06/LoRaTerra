@@ -1,0 +1,30 @@
+---
+// src/pages/contacto.astro
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contacto — LoRaTerra"
+  description="Solicita una demostración gratuita o descarga el dossier de inversores. El equipo LoRaTerra responde en menos de 24 horas."
+>
+  <div class="pt-32 pb-20 px-6 bg-eco-bg min-h-screen">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-brand-primary font-semibold text-sm tracking-wide uppercase mb-3">Contacto</p>
+      <h1 class="text-4xl md:text-5xl font-bold font-display text-brand-dark leading-tight">
+        ¿Listo para transformar tu explotación?
+      </h1>
+      <p class="text-slate-600 mt-6 leading-relaxed text-lg max-w-xl mx-auto">
+        Solicita una demostración gratuita o descarga el dossier de inversores.
+        Nuestro equipo responde en menos de 24 horas.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4 mt-10">
+        <a id="contacto-cta-demo" href="mailto:demo@loaterra.com" class="btn-primary text-base">
+          Solicitar Demo Gratuita
+        </a>
+        <a id="contacto-cta-dossier" href="mailto:inversores@loaterra.com" class="btn-secondary text-base">
+          Dossier Inversores
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

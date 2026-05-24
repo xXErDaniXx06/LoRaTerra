@@ -1,0 +1,105 @@
+---
+// src/pages/tecnologia.astro
+// Página de Tecnología — Header oscuro + Problem + Architecture
+
+import Layout from '../layouts/Layout.astro';
+import Problem from '../components/Problem.astro';
+import Architecture from '../components/Architecture.astro';
+---
+
+<Layout
+  title="Tecnología IoT — LoRaTerra"
+  description="Descubre la arquitectura LoRa de LoRaTerra: estaciones modulares, red de bajo consumo, hub central e interfaz unificada para agricultura de precisión."
+>
+  <!-- ── PAGE HEADER — fondo brand-dark oscuro ── -->
+  <div class="relative pt-32 pb-20 bg-brand-dark text-white text-center overflow-hidden">
+
+    <!-- Fondo decorativo: radial glow verde -->
+    <div
+      aria-hidden="true"
+      class="absolute inset-0 pointer-events-none"
+      style="background: radial-gradient(ellipse at 50% 120%, rgba(34,197,94,0.18) 0%, transparent 65%);"
+    ></div>
+
+    <!-- Grid dot pattern sutil -->
+    <div
+      aria-hidden="true"
+      class="absolute inset-0 opacity-[0.04]"
+      style="background-image: radial-gradient(circle, #22c55e 1px, transparent 1px); background-size: 32px 32px;"
+    ></div>
+
+    <div class="relative max-w-4xl mx-auto px-6">
+      <!-- Breadcrumb / etiqueta -->
+      <p class="inline-flex items-center gap-2 text-brand-primary font-semibold text-xs tracking-widest uppercase mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true">
+          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/>
+          <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+        </svg>
+        LoRaTerra · Tecnología
+      </p>
+
+      <!-- H1 principal -->
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-display leading-[1.1] tracking-tight">
+        Del espacio a la parcela.
+        <span class="block mt-1 text-brand-primary">Tecnología LoRa</span>
+        para agricultura de precisión.
+      </h1>
+
+      <!-- Párrafo introductorio -->
+      <p class="mt-6 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+        Descubre cómo nuestra arquitectura IoT proporciona
+        <em class="not-italic font-semibold text-white">"Ground Truth"</em>
+        —datos reales de parcela— para maximizar la rentabilidad de cada campaña.
+      </p>
+
+      <!-- Stats rápidas -->
+      <div class="flex flex-wrap justify-center gap-8 mt-10" aria-label="Cifras clave de LoRaTerra">
+        {[
+          { value: '15 km', label: 'Alcance LoRa en campo' },
+          { value: '25%', label: 'Ahorro hídrico' },
+          { value: '40%', label: 'Reducción de pérdidas' },
+          { value: '10 años', label: 'Batería de nodo' },
+        ].map((stat) => (
+          <div class="flex flex-col items-center gap-1">
+            <span class="text-3xl font-bold text-brand-primary">{stat.value}</span>
+            <span class="text-xs text-white/50 uppercase tracking-wider">{stat.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Wave separator hacia el blanco -->
+    <div class="absolute bottom-0 left-0 right-0 overflow-hidden leading-none" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-12">
+        <path d="M0,48 C360,0 1080,0 1440,48 L1440,48 L0,48 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ── SECCIÓN EL DESAFÍO ── -->
+  <Problem />
+
+  <!-- ── SECCIÓN ARQUITECTURA ── -->
+  <Architecture />
+
+  <!-- ── CTA FINAL ── -->
+  <section class="py-20 px-6 bg-white text-center" aria-label="Llamada a la acción">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl font-bold font-display text-brand-dark">
+        ¿Quieres ver el sistema en acción?
+      </h2>
+      <p class="text-slate-500 mt-4 leading-relaxed">
+        Solicita una demostración personalizada y comprueba cómo LoRaTerra
+        se adapta a tu explotación en menos de 48 horas.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 mt-8">
+        <a id="tech-cta-demo" href="/contacto" class="btn-primary text-base">
+          Solicitar Demo Gratuita
+        </a>
+        <a id="tech-cta-dossier" href="mailto:inversores@loaterra.com" class="btn-secondary text-base">
+          Dossier Técnico
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

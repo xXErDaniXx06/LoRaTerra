@@ -1,0 +1,81 @@
+# ──────────────────────────────────────────
+# LoRaTerra — .gitignore
+# Stack: Astro 4 + Tailwind CSS 3 + Node.js
+# ──────────────────────────────────────────
+
+# ── Dependencias ──────────────────────────
+node_modules/
+.pnp
+.pnp.js
+
+# ── Build outputs ─────────────────────────
+dist/
+.output/
+.vercel/
+.netlify/
+
+# ── Astro internals ───────────────────────
+.astro/
+
+# ── Entorno y secretos ────────────────────
+.env
+.env.local
+.env.development
+.env.production
+.env.staging
+.env.*.local
+*.pem
+*.key
+
+# ── Logs ──────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ── Caché de herramientas ─────────────────
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+.turbo/
+
+# ── Editores e IDEs ───────────────────────
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*.swo
+*~
+
+# ── Sistema operativo ─────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V8
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── TypeScript ────────────────────────────
+*.tsbuildinfo
+
+# ── Testing ───────────────────────────────
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+
+# ── Misc ──────────────────────────────────
+*.zip
+*.tar.gz
+*.bak

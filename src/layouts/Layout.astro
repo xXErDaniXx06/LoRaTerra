@@ -1,0 +1,65 @@
+---
+// src/layouts/Layout.astro
+// Global layout template for LoRaTerra landing page
+
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'LoRaTerra — Ingeniería IoT de Precisión para la Agricultura',
+  description = 'LoRaTerra es un ecosistema IoT modular que unifica la gestión de suelo, agua y clima. Tecnología LoRa para ahorro de agua y reducción de pérdidas en parcela.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="LoRaTerra" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+
+  <body class="bg-eco-bg font-sans antialiased overflow-x-hidden">
+    <!-- Navbar always at top -->
+    <Navbar />
+
+    <!-- Main page content -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- Footer subtle line -->
+    <footer class="border-t border-green-100 py-8 mt-24">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <span class="text-sm font-bold tracking-tight text-brand-dark">LoRaTerra</span>
+        <p class="text-xs text-slate-400">© 2025 LoRaTerra. Todos los derechos reservados.</p>
+        <div class="flex items-center gap-5">
+          <a href="#" class="text-xs text-slate-400 hover:text-brand-dark transition-colors">Privacidad</a>
+          <a href="#" class="text-xs text-slate-400 hover:text-brand-dark transition-colors">Términos</a>
+          <a href="#" class="text-xs text-slate-400 hover:text-brand-dark transition-colors">Contacto</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
