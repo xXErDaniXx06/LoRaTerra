@@ -1,0 +1,59 @@
+/* empty css                                       */
+import { T as createComponent, _ as maybeRenderHead, a7 as renderTemplate, a0 as renderComponent } from '../chunks/astro/server_DbyyUoHs.mjs';
+import 'kleur/colors';
+import { a as $$Layout, $ as $$Footer } from '../chunks/Footer_BHoCHQf9.mjs';
+import 'clsx';
+export { renderers } from '../renderers.mjs';
+
+const $$Hero = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<section id="inicio" class="relative min-h-screen flex items-center pt-16 overflow-hidden" aria-label="Sección principal"> <!-- Ambient background blobs --> <div aria-hidden="true" class="absolute inset-0 pointer-events-none"> <!-- Primary glow — top right --> <div class="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full opacity-30 animate-pulse-slow" style="background: radial-gradient(circle, #dcfce7 0%, transparent 70%);"></div> <!-- Secondary glow — bottom left --> <div class="absolute -bottom-24 -left-24 w-[400px] h-[400px] rounded-full opacity-20 animate-pulse-slow" style="background: radial-gradient(circle, #bbf7d0 0%, transparent 70%); animation-delay: 2s;"></div> <!-- Subtle grid pattern --> <div class="absolute inset-0 opacity-[0.025]" style="background-image: linear-gradient(#14532d 1px, transparent 1px), linear-gradient(90deg, #14532d 1px, transparent 1px); background-size: 48px 48px;"></div> </div> <!-- Main grid container --> <div class="relative max-w-7xl mx-auto px-6 pt-20 pb-20 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center w-full"> <!-- ── LEFT COLUMN: Copy & CTAs ── --> <div class="flex flex-col items-start gap-6 opacity-0 animate-fade-up" style="animation-fill-mode: forwards;"> <!-- Badge --> <div class="badge" role="text" aria-label="Categoría: Tecnología IoT de Precisión"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-brand-primary" aria-hidden="true"> <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"></path> <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path> </svg>
+✦ Tecnología IoT de Precisión
+</div> <!-- H1 Headline --> <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-display leading-[1.1] tracking-tight text-brand-dark">
+Ingeniería de precisión para la
+<span class="text-gradient"> fortaleza</span>
+de nuestra agricultura
+</h1> <!-- Description paragraph --> <p class="text-lg text-slate-600 mt-2 leading-relaxed max-w-xl">
+LoRa Terra es un ecosistema IoT modular que unifica la gestión de suelo,
+        agua y clima en una interfaz única. Mediante tecnología LoRa, ofrecemos datos
+        reales de parcela que permiten ahorrar un
+<strong class="font-semibold text-brand-dark">25% de agua</strong>
+y reducir pérdidas un
+<strong class="font-semibold text-brand-dark">40%</strong>.
+</p> <!-- CTA Buttons --> <div class="flex flex-wrap items-center gap-4 mt-2" role="group" aria-label="Acciones principales"> <a id="hero-cta-demo" href="/contacto" class="btn-primary text-base" aria-label="Solicitar una demostración del sistema LoRaTerra"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"> <polygon points="5 3 19 12 5 21 5 3"></polygon> </svg>
+Solicitar Demo
+</a> <a id="hero-cta-dossier" href="#dossier" class="btn-secondary text-base" aria-label="Descargar Dossier para Inversores"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"> <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path> <polyline points="7 10 12 15 17 10"></polyline> <line x1="12" y1="15" x2="12" y2="3"></line> </svg>
+Dossier Inversores
+</a> </div> <!-- Trust badges --> <div class="flex items-center gap-2 mt-2 text-xs text-slate-400" aria-label="Indicadores de confianza"> <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-brand-primary" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"> <path d="M12 1l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16l-6.2 4.3 2.4-7.4L2 8.4h7.6z"></path> </svg>
+Respaldado por líderes del sector agrícola
+<span aria-hidden="true">·</span>
+Certificado CE
+<span aria-hidden="true">·</span>
+GDPR Compliant
+</div> </div> <!-- ── RIGHT COLUMN: Visual Placeholder ── --> <div class="relative flex items-center justify-center opacity-0 animate-fade-up animate-delay-200" style="animation-fill-mode: forwards;" aria-label="Visualización del sistema LoRaTerra"> <!-- Main visual card --> <div class="relative w-full aspect-square max-w-md rounded-3xl shadow-medium overflow-hidden" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);"> <!-- Decorative inner rings --> <div aria-hidden="true" class="absolute inset-0 flex items-center justify-center"> <div class="w-64 h-64 rounded-full border border-green-200/60 animate-pulse-slow"></div> <div class="absolute w-48 h-48 rounded-full border border-green-300/40 animate-pulse-slow" style="animation-delay: 1s;"></div> <div class="absolute w-32 h-32 rounded-full border border-green-400/30 animate-pulse-slow" style="animation-delay: 2s;"></div> </div> <!-- Center content --> <div class="absolute inset-0 flex flex-col items-center justify-center gap-6 p-8"> <!-- Large leaf SVG icon --> <div class="w-20 h-20 flex items-center justify-center rounded-2xl bg-white/70 shadow-soft backdrop-blur-sm"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-brand-dark" aria-hidden="true"> <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"></path> <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path> </svg> </div> <div class="text-center"> <p class="text-brand-dark/50 text-sm font-medium tracking-wide">
+[ Imagen Isométrica del Sistema ]
+</p> <p class="text-brand-dark/30 text-xs mt-1">
+Dashboard IoT · Sensores LoRa · Parcela
+</p> </div> <!-- Floating data chips --> <div class="flex flex-wrap justify-center gap-2" aria-hidden="true"> ${[
+    { icon: "\u{1F4A7}", label: "Humedad 68%" },
+    { icon: "\u{1F321}\uFE0F", label: "Temp. 22\xB0C" },
+    { icon: "\u{1F4E1}", label: "LoRa Online" }
+  ].map((chip) => renderTemplate`<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/80 backdrop-blur-sm text-brand-dark text-xs font-semibold rounded-full shadow-soft border border-green-100"> ${chip.icon} ${chip.label} </span>`)} </div> </div> <!-- Corner accent decorations --> <div aria-hidden="true" class="absolute top-4 right-4 w-3 h-3 rounded-full bg-brand-primary opacity-60 animate-pulse"></div> <div aria-hidden="true" class="absolute bottom-4 left-4 w-2 h-2 rounded-full bg-green-400 opacity-40 animate-pulse" style="animation-delay: 1.5s;"></div> </div> <!-- Floating metric cards outside main visual --> <div aria-hidden="true" class="absolute -left-6 top-1/4 bg-white rounded-2xl shadow-medium p-3 border border-green-100 flex items-center gap-2 hidden lg:flex"> <div class="w-8 h-8 rounded-lg bg-brand-light flex items-center justify-center"> <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-brand-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg> </div> <div> <p class="text-xs text-slate-400 leading-none">Eficiencia</p> <p class="text-sm font-bold text-brand-dark">+25%</p> </div> </div> <div aria-hidden="true" class="absolute -right-6 bottom-1/4 bg-white rounded-2xl shadow-medium p-3 border border-green-100 flex items-center gap-2 hidden lg:flex"> <div class="w-8 h-8 rounded-lg bg-brand-light flex items-center justify-center"> <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-brand-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> </div> <div> <p class="text-xs text-slate-400 leading-none">Parcelas activas</p> <p class="text-sm font-bold text-brand-dark">1.4K+</p> </div> </div> </div> </div> <!-- Scroll indicator --> <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50" aria-hidden="true"> <span class="text-xs text-slate-400 tracking-widest uppercase">Descubre más</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-slate-400 animate-bounce"> <polyline points="6 9 12 15 18 9"></polyline> </svg> </div> </section>`;
+}, "C:/Users/danie/Documents/LoRaTerra/src/components/Hero.astro", void 0);
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "LoRaTerra \u2014 Ingenier\xEDa IoT de Precisi\xF3n para la Agricultura", "description": "LoRaTerra es un ecosistema IoT modular que unifica la gesti\xF3n de suelo, agua y clima en una interfaz \xFAnica. Tecnolog\xEDa LoRa para ahorro de agua y reducci\xF3n de p\xE9rdidas en parcela." }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Hero", $$Hero, {})} ${renderComponent($$result2, "Footer", $$Footer, {})} ` })}`;
+}, "C:/Users/danie/Documents/LoRaTerra/src/pages/index.astro", void 0);
+
+const $$file = "C:/Users/danie/Documents/LoRaTerra/src/pages/index.astro";
+const $$url = "";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

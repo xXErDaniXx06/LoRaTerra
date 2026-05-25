@@ -1,0 +1,63 @@
+/* empty css                                       */
+import { T as createComponent, _ as maybeRenderHead, a7 as renderTemplate, a0 as renderComponent } from '../chunks/astro/server_DbyyUoHs.mjs';
+import 'kleur/colors';
+import { a as $$Layout, $ as $$Footer } from '../chunks/Footer_BHoCHQf9.mjs';
+import 'clsx';
+export { renderers } from '../renderers.mjs';
+
+const $$TeamProfile = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<section id="equipo" class="bg-white py-24 px-6" aria-labelledby="team-heading"> <div class="max-w-6xl mx-auto"> <!-- Encabezado --> <div class="text-center mb-4"> <p class="text-brand-primary font-semibold text-xs tracking-widest uppercase mb-3">
+El Equipo
+</p> <h2 id="team-heading" class="text-4xl font-bold font-display text-brand-dark leading-tight">
+Del Espacio a la Tierra
+</h2> <p class="text-slate-500 mt-3 max-w-xl mx-auto leading-relaxed">
+Transferencia tecnológica vertical para la máxima fiabilidad en campo.
+</p> </div> <!-- Tarjeta principal del promotor --> <div class="max-w-5xl mx-auto mt-12 bg-eco-bg rounded-3xl p-8 md:p-12 shadow-sm flex flex-col md:flex-row gap-10 items-center border border-green-100/60" role="article" aria-label="Perfil de Daniel Carrasco"> <!-- Foto de perfil --> <div class="w-48 h-48 flex-shrink-0"> <img src="/logos/daniel-carrasco.jpeg" alt="Daniel Carrasco — CEO & Lead Engineer de LoRaTerra" class="w-48 h-48 rounded-full object-cover object-top border-4 border-white shadow-medium" loading="eager" width="192" height="192"> </div> <!-- Contenido textual --> <div class="flex flex-col gap-4 flex-1"> <!-- Nombre y rol --> <div> <p class="text-brand-primary font-semibold tracking-widest uppercase text-sm mb-1">
+CEO &amp; Lead Engineer
+</p> <h3 class="text-3xl font-bold text-brand-dark leading-tight">
+Daniel Carrasco
+</h3> </div> <!-- Bio --> <p class="text-slate-600 leading-relaxed">
+Estudiante de Ingeniería Informática en la UMA e investigador en sistemas de
+          comunicación desde los 12 años. Especialista en arquitecturas de software robustas
+          y desarrollo de comunicaciones LoRa en condiciones extremas
+<strong class="font-semibold text-slate-700">(sector aeroespacial)</strong>.
+          Lidera el ciclo completo de vida del producto, desde el diseño de hardware
+          hasta la infraestructura en la nube.
+</p> <!-- Tags / habilidades --> <div class="flex flex-wrap gap-2 mt-1" aria-label="Áreas de especialización"> ${["LoRa / LPWAN", "Embedded Systems", "Cloud Architecture", "Agri-IoT", "Aerospace", "Full-Stack"].map((tag) => renderTemplate`<span class="inline-flex items-center px-3 py-1 bg-brand-light text-brand-dark text-xs font-semibold rounded-full border border-green-200"> ${tag} </span>`)} </div> <!-- Redes / contacto --> <div class="flex items-center gap-4 mt-2"> <a href="https://github.com/xXErDaniXx06" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-brand-dark transition-colors" aria-label="Perfil de GitHub de Daniel Carrasco"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4" aria-hidden="true"> <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"></path> </svg>
+GitHub
+</a> <a href="https://www.linkedin.com/in/dcargar/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-brand-dark transition-colors" aria-label="Perfil de LinkedIn de Daniel Carrasco"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4" aria-hidden="true"> <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.55V9h3.569v11.452z"></path> </svg>
+LinkedIn
+</a> <a href="mailto:daniel@loraterra.com" class="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-brand-dark transition-colors" aria-label="Email de Daniel Carrasco"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"> <rect width="20" height="16" x="2" y="4" rx="2"></rect> <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path> </svg>
+Contactar
+</a> </div> </div> </div> <!-- Bloque de capacidad operativa --> <div class="mt-12 text-center max-w-3xl mx-auto" role="complementary" aria-label="Capacidad operativa del equipo"> <div class="inline-flex items-center gap-3 bg-brand-light/60 border border-green-200 rounded-2xl px-6 py-4"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-brand-primary flex-shrink-0" aria-hidden="true"> <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path> <circle cx="9" cy="7" r="4"></circle> <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path> <path d="M16 3.13a4 4 0 0 1 0 7.75"></path> </svg> <p class="text-slate-600 text-sm leading-relaxed text-left">
+El núcleo tecnológico está respaldado por un equipo de soporte de
+<strong class="text-brand-dark font-semibold">+3 ingenieros</strong>,
+          garantizando capacidad de despliegue y mantenimiento predictivo segmentado
+          para cientos de explotaciones.
+</p> </div> </div> </div> </section>`;
+}, "C:/Users/danie/Documents/LoRaTerra/src/components/TeamProfile.astro", void 0);
+
+const $$Equipo = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Equipo \u2014 LoRaTerra", "description": "El equipo de LoRaTerra: ingenieros, agr\xF3nomos y expertos en IoT comprometidos con la agricultura de precisi\xF3n. Conoce a Daniel Carrasco, CEO & Lead Engineer." }, { "default": ($$result2) => renderTemplate`  ${maybeRenderHead()}<div class="relative pt-32 pb-16 bg-brand-dark text-white text-center overflow-hidden"> <!-- Dot pattern decorativo --> <div aria-hidden="true" class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle, #22c55e 1px, transparent 1px); background-size: 32px 32px;"></div> <!-- Glow radial --> <div aria-hidden="true" class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse at 50% 100%, rgba(34,197,94,0.15) 0%, transparent 60%);"></div> <div class="relative max-w-3xl mx-auto px-6"> <p class="text-brand-primary font-semibold text-xs tracking-widest uppercase mb-4">
+LoRaTerra · Equipo
+</p> <h1 class="text-4xl md:text-5xl font-bold font-display leading-tight">
+Del Espacio a la Tierra.
+<span class="block text-brand-primary mt-1">El equipo que lo hace posible.</span> </h1> <p class="text-white/70 mt-5 text-lg max-w-xl mx-auto leading-relaxed">
+Transferencia tecnológica real: del desarrollo aeroespacial a la parcela agrícola,
+        para garantizar la máxima fiabilidad en campo.
+</p> </div> <!-- Wave a blanco --> <div class="absolute bottom-0 left-0 right-0 overflow-hidden leading-none" aria-hidden="true"> <svg viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-10"> <path d="M0,40 C360,0 1080,0 1440,40 L1440,40 L0,40 Z" fill="#ffffff"></path> </svg> </div> </div>  ${renderComponent($$result2, "TeamProfile", $$TeamProfile, {})}  ${renderComponent($$result2, "Footer", $$Footer, {})} ` })}`;
+}, "C:/Users/danie/Documents/LoRaTerra/src/pages/equipo.astro", void 0);
+
+const $$file = "C:/Users/danie/Documents/LoRaTerra/src/pages/equipo.astro";
+const $$url = "/equipo";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Equipo,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };
