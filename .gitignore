@@ -13,6 +13,7 @@ dist/
 .output/
 .vercel/
 .netlify/
+.firebase/
 
 # ── Astro internals ───────────────────────
 .astro/
