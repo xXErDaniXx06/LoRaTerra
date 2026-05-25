@@ -19,11 +19,7 @@ dist/
 
 # ── Entorno y secretos ────────────────────
 .env
-.env.local
-.env.development
-.env.production
-.env.staging
-.env.*.local
+.env.*
 *.pem
 *.key
 
